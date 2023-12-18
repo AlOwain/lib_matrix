@@ -1,10 +1,10 @@
 all: build/matrix
 
-build/matrix: build/matrix.o
-	g++ build/matrix.o -o build/matrix
+build/matrix: build/main.o
+	g++ build/main.o -o build/matrix
 
-build/matrix.o: src/matrix.cpp | build
-	g++ -c src/matrix.cpp -o build/matrix.o
+build/main.o: src/main.cpp | build
+	g++ -c src/main.cpp -o build/main.o
 	
 build:
 	mkdir -p build

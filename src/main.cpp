@@ -10,5 +10,8 @@ int main(int argc, char **argv)
     std::cout << "-----\n";
     y = x + y;
     y.print();
+
+    matrix s(2, 4);
+    s.print();
     return 0;
 }

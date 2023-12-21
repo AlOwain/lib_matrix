@@ -1,5 +1,15 @@
 #include "matrix.h"
 
+matrix::matrix(int rows, int columns)
+{
+    for (int i = 0; i < rows; i++)
+    {
+        grid.push_back(std::vector<int>());
+        for (int j = 0; j < columns; j++)
+            grid[i].push_back(0);
+    }
+}
+
 matrix::matrix(std::vector<std::vector<int>> values)
 {
     // FIXME: Check for proper format.

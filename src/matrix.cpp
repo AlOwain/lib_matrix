@@ -19,18 +19,20 @@ matrix::matrix(std::vector<std::vector<int>> values)
 
 matrix matrix::operator+(matrix x)
 {
-    std::vector<std::vector<int>> newValues = x.grid;
+    // FIXME: Check that both matrices are the same size.
+    matrix newValues(grid.size());
     for (int i = 0; i < grid.size(); i++)
         for (int j = 0; j < grid[i].size(); j++)
-            newValues[i][j] = newValues[i][j] + grid[i][j];
+            newValues.grid[i][j] = newValues.grid[i][j] + grid[i][j];
     return newValues;
 }
 matrix matrix::operator-(matrix x)
 {
-    std::vector<std::vector<int>> newValues = x.grid;
+    // FIXME: Check that both matrices are the same size.
+    matrix newValues(grid.size());
     for (int i = 0; i < grid.size(); i++)
         for (int j = 0; j < grid[i].size(); j++)
-            newValues[i][j] = newValues[i][j] - grid[i][j];
+            newValues.grid[i][j] = newValues.grid[i][j] - grid[i][j];
     return newValues;
 }
 void matrix::operator=(matrix x)

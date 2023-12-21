@@ -3,6 +3,7 @@
 
 class matrix {
 public:
+    matrix(int size);
     matrix(int rows, int columns);
     matrix(std::vector<std::vector<int>> values);
 

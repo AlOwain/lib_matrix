@@ -1,9 +1,9 @@
-all: build/lib_matrix.a
+all: build build/lib_matrix.a
 
 build/lib_matrix.a: build/matrix.o
 	ar rcs build/matrix.a build/matrix.o
 	
-build/matrix.o: src/matrix.cpp | build
+build/matrix.o: src/matrix.cpp
 	g++ -c src/matrix.cpp -o build/matrix.o
 
 build:
